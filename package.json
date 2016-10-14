@@ -1,7 +1,7 @@
 {
   "name": "github-lookup",
   "version": "1.0.0",
-  "description": "",
+  "description": "app searches github users",
   "main": "index.js",
   "scripts": {
     "test": "test"
@@ -22,5 +22,13 @@
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.3",
     "vinyl-source-stream": "^1.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CalebPaul/github-lookup-js2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CalebPaul/github-lookup-js2/issues"
+  },
+  "homepage": "https://github.com/CalebPaul/github-lookup-js2#readme"
 }

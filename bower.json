@@ -1,12 +1,12 @@
 {
   "name": "github-lookup",
-  "description": "",
+  "description": "github user lookup",
   "main": "index.js",
   "authors": [
     "Caleb Paul <calebpaul21@gmail.com>"
   ],
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/CalebPaul/github-lookup-js2",
   "ignore": [
     "**/.*",
     "node_modules",
