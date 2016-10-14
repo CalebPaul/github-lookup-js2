@@ -1,3 +1,4 @@
+$black : black;
 $brown : #471C02;
 $lightbrown : #EDB271;
 $silver : #D0CBC7;
@@ -9,11 +10,11 @@ body {
 
   .container{
     .well {
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.2);
       border-width: 0px;
     }
     h1 {
-      color: $silver;
+      color: $black;
     }
   }
 }

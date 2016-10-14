@@ -11,4 +11,4 @@
 * DONE Does the app include a gulp-based asset pipeline with a development server? Does the asset pipeline include all tasks from the homework this week? (See below)
 * Are previous standards met?
 * DONE Does the project demonstrate concepts covered this week? If prompted, are you able to discuss the flow of your code and the concepts behind it with an instructor using correct terminology?
-* Is the app in a presentable, portfolio-quality state?
+* DONE Is the app in a presentable, portfolio-quality state?
