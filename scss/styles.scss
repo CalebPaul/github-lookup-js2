@@ -16,12 +16,16 @@ body {
     h1 {
       color: $black;
     }
+    .repoInfo:hover{
+      overflow-y: scroll;
+    }
     .repoInfo{
       height: 750px;
       display: none;
-      overflow-y: scroll;
+      overflow: hidden;
       text-align: center;
       list-style: none;
     }
+
   }
 }
