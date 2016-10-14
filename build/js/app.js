@@ -9,8 +9,8 @@ function Lookup() {
 }
 // https://api.github.com/users/daneden?access_token=750272a02e5a4bbc131e56a790127a67311a1605
 
-Lookup.prototype.getRepos = function(repoUrl){
-  $.get(repoUrl).then(function(response){
+Lookup.prototype.getRepos = function(repoUrl, apiKey){
+  $.get(repoUrl+'?access_token'+apiKey).then(function(response){
     console.log(response);
 
   }).fail(function(error){
