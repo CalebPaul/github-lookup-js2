@@ -1,19 +1,19 @@
 $brown : #471C02;
 $lightbrown : #EDB271;
+$silver : #D0CBC7;
 
 body {
   background: url(../../img/bg1.jpg);
-  background: black(0.5);
   background-size:cover;
   background-attachment: fixed;
 
   .container{
     .well {
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba(0, 0, 0, 0.4);
       border-width: 0px;
     }
     h1 {
-      color: $lightbrown;
+      color: $silver;
     }
   }
 }

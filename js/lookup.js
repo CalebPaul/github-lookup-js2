@@ -9,6 +9,14 @@ function Lookup() {
 Lookup.prototype.getUser = function(user){
   $.get('https://api.github.com/users/'+user+'?access_token=' + apiKey).then(function(response){
     console.log(response);
+    //access object properties
+    var name = response.name;
+    alert(name);
+    $('.info').append('<div class="col-sm-5">'
+    + '<h4>'+name+'</h4>'
+    +objectproperty+
+    '</div>');
+
   }).fail(function(error){
     console.log(error.responseJSON.message);
   });
