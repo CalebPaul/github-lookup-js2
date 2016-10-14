@@ -7,21 +7,27 @@ var apiKey = require('./../.env').apiKey;
 
 function Lookup() {
 }
-// https://api.github.com/users/daneden?access_token=750272a02e5a4bbc131e56a790127a67311a1605
 
 Lookup.prototype.getRepos = function(repoUrl, apiKey){
   $.get(repoUrl+'?access_token'+apiKey).then(function(response){
     console.log(response);
-
-  }).fail(function(error){
-    console.log(error.responseJSON.message);
-  });
-};
+    for (var project of response) {
+      console.log(project);
+      if (project.description === null) {
+        project.description = "user did not describe project"
+      }
+      $('.repoInfo').append('<li class="text-center">'
+      + '<label class = "page-header">'+project.name+'</label>'
+      +'<h6>Project Description: '+project.description+'</h6>'
+      +'<h6>Primary Language: '+project.language+'</h6>'
+      +'</li>');
+      }
+    }
+  )};
 
 Lookup.prototype.getUser = function(user){
   var that = this;
   $.get('https://api.github.com/users/'+user+'?access_token=' + apiKey).then(function(response){
-    console.log(response);
     var name = response.name;
     var location = response.location;
     var repos = response.public_repos;
@@ -38,13 +44,15 @@ Lookup.prototype.getUser = function(user){
     console.log(repos);
     console.log(githubUrl);
     console.log(repoUrl);
-    that.getRepos(repoUrl);
-    $('.info').append('<div class="col-sm-4 text-center">'
+
+    $('.userInfo').append('<div class="col-sm-4 text-center">'
     + '<label class = "page-header">User Info</label>'
     + '<h6>User Name: '+name+'</h6>'
     +'<h6>Location: '+location+'</h6>'
     +'<h6># of repositories: '+repos+'</h6>'
     +'</div>');
+
+    that.getRepos(repoUrl);
 
   }).fail(function(error){
     console.log(error.responseJSON.message);
@@ -61,10 +69,9 @@ $(document).ready(function() {
 
   $('#button').click(function(event) {
     event.preventDefault();
-    //$('.showThumb').children().remove();
     var user = $('#user').val();
-
     newLookup.getUser(user);
+    $('.repoInfo').slideDown();
   });
 });
 

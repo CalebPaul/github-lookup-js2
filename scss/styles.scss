@@ -16,5 +16,12 @@ body {
     h1 {
       color: $black;
     }
+    .repoInfo{
+      height: 750px;
+      display: none;
+      overflow-y: scroll;
+      text-align: center;
+      list-style: none;
+    }
   }
 }

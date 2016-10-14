@@ -5,9 +5,8 @@ $(document).ready(function() {
 
   $('#button').click(function(event) {
     event.preventDefault();
-    //$('.showThumb').children().remove();
     var user = $('#user').val();
-
     newLookup.getUser(user);
+    $('.repoInfo').slideDown();
   });
 });
