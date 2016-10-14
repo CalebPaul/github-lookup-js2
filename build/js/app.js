@@ -15,7 +15,15 @@ Lookup.prototype.getUser = function(user){
     console.log(response);
     //access object properties
     var name = response.name;
-    alert(name);
+    var repos = response.public_repos;
+    var url = response.url;
+    //catch null
+    if (name === null) {
+      name = "user did not give name"
+    }
+    console.log(name);
+    console.log(repos);
+    console.log(url);
     $('.info').append('<div class="col-sm-5">'
     + '<h4>'+name+'</h4>'
     +objectproperty+
