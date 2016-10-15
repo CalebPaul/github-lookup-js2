@@ -12,10 +12,12 @@ _GitPeek is a web app that displays a guthub user's name and location, as well a
 ## Setup/Installation Requirements
 
 * _Clone this repository (https://github.com/CalebPaul/github-lookup-js2.git) to your desktop._
-* _Install Node Package Manager(npm), Gulp, and all dependencies listed in the package.json file._
-* _Install Bower with npm._
+* _Install Node Package Manager(npm)._
+* _Instal Gulp and Bower._
+* _Install all dependencies listed in the package.json, and bower.json files._
 * _Navigate to project folder in terminal._
-* _Type `gulp build` in terminal._
+* _Create .env file in main level of directory, populate with `exports.apiKey = "apikey"`._
+* _Type `gulp serve` in terminal._
 
 
 ## Known Bugs
